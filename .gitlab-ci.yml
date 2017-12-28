@@ -1,0 +1,12 @@
+before_script:
+  - docker login -u "gitlab-ci-token" -p "${CI_BUILD_TOKEN}" "${CI_REGISTRY}"
+  - echo "Runner ${CI_RUNNER_DESCRIPTION}"
+  - echo "Release Version ${SERVICE_VERSION}"
+stages:
+  - build
+build:
+  stage: build
+  script:
+    - docker build --pull -t "${CI_REGISTRY_IMAGE}:1.0.0" .
+    - docker push "${CI_REGISTRY_IMAGE}:1.0.0"
+

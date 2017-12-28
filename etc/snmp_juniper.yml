@@ -1,0 +1,740 @@
+juniper:
+  version: 3
+  auth:
+    username: xxx
+    password: xxx
+    auth_protocol: SHA
+    priv_protocol: AES
+    security_level: authPriv
+    priv_password: xxx
+  walk:
+  - 1.3.6.1.4.1.2636.3.1.13.1
+  - 1.3.6.1.4.1.2636.3.3.1
+  - 1.3.6.1.4.1.2636.3.39.1.12.1.1.1
+  metrics:
+  - name: jnxOperatingContentsIndex
+    oid: 1.3.6.1.4.1.2636.3.1.13.1.1
+    type: gauge
+    help: The associated jnxContentsContainerIndex in the jnxContentsTable. - 1.3.6.1.4.1.2636.3.1.13.1.1
+    indexes:
+    - labelname: jnxOperatingContentsIndex
+      type: gauge
+    - labelname: jnxOperatingL1Index
+      type: gauge
+    - labelname: jnxOperatingL2Index
+      type: gauge
+    - labelname: jnxOperatingL3Index
+      type: gauge
+  - name: jnxOperatingL1Index
+    oid: 1.3.6.1.4.1.2636.3.1.13.1.2
+    type: gauge
+    help: The level one index associated with this subject - 1.3.6.1.4.1.2636.3.1.13.1.2
+    indexes:
+    - labelname: jnxOperatingContentsIndex
+      type: gauge
+    - labelname: jnxOperatingL1Index
+      type: gauge
+    - labelname: jnxOperatingL2Index
+      type: gauge
+    - labelname: jnxOperatingL3Index
+      type: gauge
+  - name: jnxOperatingL2Index
+    oid: 1.3.6.1.4.1.2636.3.1.13.1.3
+    type: gauge
+    help: The level two index associated with this subject - 1.3.6.1.4.1.2636.3.1.13.1.3
+    indexes:
+    - labelname: jnxOperatingContentsIndex
+      type: gauge
+    - labelname: jnxOperatingL1Index
+      type: gauge
+    - labelname: jnxOperatingL2Index
+      type: gauge
+    - labelname: jnxOperatingL3Index
+      type: gauge
+  - name: jnxOperatingL3Index
+    oid: 1.3.6.1.4.1.2636.3.1.13.1.4
+    type: gauge
+    help: The level three index associated with this subject - 1.3.6.1.4.1.2636.3.1.13.1.4
+    indexes:
+    - labelname: jnxOperatingContentsIndex
+      type: gauge
+    - labelname: jnxOperatingL1Index
+      type: gauge
+    - labelname: jnxOperatingL2Index
+      type: gauge
+    - labelname: jnxOperatingL3Index
+      type: gauge
+  - name: jnxOperatingDescr
+    oid: 1.3.6.1.4.1.2636.3.1.13.1.5
+    type: DisplayString
+    help: The name or detailed description of this subject. - 1.3.6.1.4.1.2636.3.1.13.1.5
+    indexes:
+    - labelname: jnxOperatingContentsIndex
+      type: gauge
+    - labelname: jnxOperatingL1Index
+      type: gauge
+    - labelname: jnxOperatingL2Index
+      type: gauge
+    - labelname: jnxOperatingL3Index
+      type: gauge
+  - name: jnxOperatingState
+    oid: 1.3.6.1.4.1.2636.3.1.13.1.6
+    type: gauge
+    help: The operating state of this subject. - 1.3.6.1.4.1.2636.3.1.13.1.6
+    indexes:
+    - labelname: jnxOperatingContentsIndex
+      type: gauge
+    - labelname: jnxOperatingL1Index
+      type: gauge
+    - labelname: jnxOperatingL2Index
+      type: gauge
+    - labelname: jnxOperatingL3Index
+      type: gauge
+  - name: jnxOperatingTemp
+    oid: 1.3.6.1.4.1.2636.3.1.13.1.7
+    type: gauge
+    help: The temperature in Celsius (degrees C) of this subject - 1.3.6.1.4.1.2636.3.1.13.1.7
+    indexes:
+    - labelname: jnxOperatingContentsIndex
+      type: gauge
+    - labelname: jnxOperatingL1Index
+      type: gauge
+    - labelname: jnxOperatingL2Index
+      type: gauge
+    - labelname: jnxOperatingL3Index
+      type: gauge
+  - name: jnxOperatingCPU
+    oid: 1.3.6.1.4.1.2636.3.1.13.1.8
+    type: gauge
+    help: The CPU utilization in percentage of this subject - 1.3.6.1.4.1.2636.3.1.13.1.8
+    indexes:
+    - labelname: jnxOperatingContentsIndex
+      type: gauge
+    - labelname: jnxOperatingL1Index
+      type: gauge
+    - labelname: jnxOperatingL2Index
+      type: gauge
+    - labelname: jnxOperatingL3Index
+      type: gauge
+  - name: jnxOperatingISR
+    oid: 1.3.6.1.4.1.2636.3.1.13.1.9
+    type: gauge
+    help: The CPU utilization in percentage of this subject spending in interrupt
+      service routine (ISR) - 1.3.6.1.4.1.2636.3.1.13.1.9
+    indexes:
+    - labelname: jnxOperatingContentsIndex
+      type: gauge
+    - labelname: jnxOperatingL1Index
+      type: gauge
+    - labelname: jnxOperatingL2Index
+      type: gauge
+    - labelname: jnxOperatingL3Index
+      type: gauge
+  - name: jnxOperatingDRAMSize
+    oid: 1.3.6.1.4.1.2636.3.1.13.1.10
+    type: gauge
+    help: The DRAM size in bytes of this subject - 1.3.6.1.4.1.2636.3.1.13.1.10
+    indexes:
+    - labelname: jnxOperatingContentsIndex
+      type: gauge
+    - labelname: jnxOperatingL1Index
+      type: gauge
+    - labelname: jnxOperatingL2Index
+      type: gauge
+    - labelname: jnxOperatingL3Index
+      type: gauge
+  - name: jnxOperatingBuffer
+    oid: 1.3.6.1.4.1.2636.3.1.13.1.11
+    type: gauge
+    help: The buffer pool utilization in percentage of this subject - 1.3.6.1.4.1.2636.3.1.13.1.11
+    indexes:
+    - labelname: jnxOperatingContentsIndex
+      type: gauge
+    - labelname: jnxOperatingL1Index
+      type: gauge
+    - labelname: jnxOperatingL2Index
+      type: gauge
+    - labelname: jnxOperatingL3Index
+      type: gauge
+  - name: jnxOperatingHeap
+    oid: 1.3.6.1.4.1.2636.3.1.13.1.12
+    type: gauge
+    help: The heap utilization in percentage of this subject - 1.3.6.1.4.1.2636.3.1.13.1.12
+    indexes:
+    - labelname: jnxOperatingContentsIndex
+      type: gauge
+    - labelname: jnxOperatingL1Index
+      type: gauge
+    - labelname: jnxOperatingL2Index
+      type: gauge
+    - labelname: jnxOperatingL3Index
+      type: gauge
+  - name: jnxOperatingUpTime
+    oid: 1.3.6.1.4.1.2636.3.1.13.1.13
+    type: gauge
+    help: The time interval in 10-millisecond period that this subject has been up
+      and running - 1.3.6.1.4.1.2636.3.1.13.1.13
+    indexes:
+    - labelname: jnxOperatingContentsIndex
+      type: gauge
+    - labelname: jnxOperatingL1Index
+      type: gauge
+    - labelname: jnxOperatingL2Index
+      type: gauge
+    - labelname: jnxOperatingL3Index
+      type: gauge
+  - name: jnxOperatingLastRestart
+    oid: 1.3.6.1.4.1.2636.3.1.13.1.14
+    type: gauge
+    help: The value of sysUpTime when this subject last restarted - 1.3.6.1.4.1.2636.3.1.13.1.14
+    indexes:
+    - labelname: jnxOperatingContentsIndex
+      type: gauge
+    - labelname: jnxOperatingL1Index
+      type: gauge
+    - labelname: jnxOperatingL2Index
+      type: gauge
+    - labelname: jnxOperatingL3Index
+      type: gauge
+  - name: jnxOperatingMemory
+    oid: 1.3.6.1.4.1.2636.3.1.13.1.15
+    type: gauge
+    help: The installed memory size in Megabytes of this subject - 1.3.6.1.4.1.2636.3.1.13.1.15
+    indexes:
+    - labelname: jnxOperatingContentsIndex
+      type: gauge
+    - labelname: jnxOperatingL1Index
+      type: gauge
+    - labelname: jnxOperatingL2Index
+      type: gauge
+    - labelname: jnxOperatingL3Index
+      type: gauge
+  - name: jnxOperatingStateOrdered
+    oid: 1.3.6.1.4.1.2636.3.1.13.1.16
+    type: gauge
+    help: The operating state of this subject - 1.3.6.1.4.1.2636.3.1.13.1.16
+    indexes:
+    - labelname: jnxOperatingContentsIndex
+      type: gauge
+    - labelname: jnxOperatingL1Index
+      type: gauge
+    - labelname: jnxOperatingL2Index
+      type: gauge
+    - labelname: jnxOperatingL3Index
+      type: gauge
+  - name: jnxOperatingChassisId
+    oid: 1.3.6.1.4.1.2636.3.1.13.1.17
+    type: gauge
+    help: Identifies the chassis on which the contents of this row exists. - 1.3.6.1.4.1.2636.3.1.13.1.17
+    indexes:
+    - labelname: jnxOperatingContentsIndex
+      type: gauge
+    - labelname: jnxOperatingL1Index
+      type: gauge
+    - labelname: jnxOperatingL2Index
+      type: gauge
+    - labelname: jnxOperatingL3Index
+      type: gauge
+  - name: jnxOperatingChassisDescr
+    oid: 1.3.6.1.4.1.2636.3.1.13.1.18
+    type: DisplayString
+    help: A textual description of the chassis on which the contents of this row exists.
+      - 1.3.6.1.4.1.2636.3.1.13.1.18
+    indexes:
+    - labelname: jnxOperatingContentsIndex
+      type: gauge
+    - labelname: jnxOperatingL1Index
+      type: gauge
+    - labelname: jnxOperatingL2Index
+      type: gauge
+    - labelname: jnxOperatingL3Index
+      type: gauge
+  - name: jnxOperating1MinLoadAvg
+    oid: 1.3.6.1.4.1.2636.3.1.13.1.20
+    type: gauge
+    help: The CPU Load Average over the last 1 minutes Here it will be shown as percentage
+      value Zero if unavailable or inapplicable. - 1.3.6.1.4.1.2636.3.1.13.1.20
+    indexes:
+    - labelname: jnxOperatingContentsIndex
+      type: gauge
+    - labelname: jnxOperatingL1Index
+      type: gauge
+    - labelname: jnxOperatingL2Index
+      type: gauge
+    - labelname: jnxOperatingL3Index
+      type: gauge
+  - name: jnxOperating5MinLoadAvg
+    oid: 1.3.6.1.4.1.2636.3.1.13.1.21
+    type: gauge
+    help: The CPU Load Average over the last 5 minutes Here it will be shown as percentage
+      value Zero if unavailable or inapplicable. - 1.3.6.1.4.1.2636.3.1.13.1.21
+    indexes:
+    - labelname: jnxOperatingContentsIndex
+      type: gauge
+    - labelname: jnxOperatingL1Index
+      type: gauge
+    - labelname: jnxOperatingL2Index
+      type: gauge
+    - labelname: jnxOperatingL3Index
+      type: gauge
+  - name: jnxOperating15MinLoadAvg
+    oid: 1.3.6.1.4.1.2636.3.1.13.1.22
+    type: gauge
+    help: The CPU Load Average over the last 15 minutes Here it will be shown as percentage
+      value Zero if unavailable or inapplicable. - 1.3.6.1.4.1.2636.3.1.13.1.22
+    indexes:
+    - labelname: jnxOperatingContentsIndex
+      type: gauge
+    - labelname: jnxOperatingL1Index
+      type: gauge
+    - labelname: jnxOperatingL2Index
+      type: gauge
+    - labelname: jnxOperatingL3Index
+      type: gauge
+  - name: jnxOperating1MinAvgCPU
+    oid: 1.3.6.1.4.1.2636.3.1.13.1.23
+    type: gauge
+    help: The CPU utilization in percentage of this subject averaged over last 1 minutes
+      - 1.3.6.1.4.1.2636.3.1.13.1.23
+    indexes:
+    - labelname: jnxOperatingContentsIndex
+      type: gauge
+    - labelname: jnxOperatingL1Index
+      type: gauge
+    - labelname: jnxOperatingL2Index
+      type: gauge
+    - labelname: jnxOperatingL3Index
+      type: gauge
+  - name: jnxOperating5MinAvgCPU
+    oid: 1.3.6.1.4.1.2636.3.1.13.1.24
+    type: gauge
+    help: The CPU utilization in percentage of this subject averaged over last 5 minutes
+      - 1.3.6.1.4.1.2636.3.1.13.1.24
+    indexes:
+    - labelname: jnxOperatingContentsIndex
+      type: gauge
+    - labelname: jnxOperatingL1Index
+      type: gauge
+    - labelname: jnxOperatingL2Index
+      type: gauge
+    - labelname: jnxOperatingL3Index
+      type: gauge
+  - name: jnxOperating15MinAvgCPU
+    oid: 1.3.6.1.4.1.2636.3.1.13.1.25
+    type: gauge
+    help: The CPU utilization in percentage of this subject averaged over last 15
+      minutes - 1.3.6.1.4.1.2636.3.1.13.1.25
+    indexes:
+    - labelname: jnxOperatingContentsIndex
+      type: gauge
+    - labelname: jnxOperatingL1Index
+      type: gauge
+    - labelname: jnxOperatingL2Index
+      type: gauge
+    - labelname: jnxOperatingL3Index
+      type: gauge
+  - name: jnxOperatingBufferCP
+    oid: 1.3.6.1.4.1.2636.3.1.13.1.26
+    type: gauge
+    help: The buffer pool utilization in percentage of this subject in control plane
+      - 1.3.6.1.4.1.2636.3.1.13.1.26
+    indexes:
+    - labelname: jnxOperatingContentsIndex
+      type: gauge
+    - labelname: jnxOperatingL1Index
+      type: gauge
+    - labelname: jnxOperatingL2Index
+      type: gauge
+    - labelname: jnxOperatingL3Index
+      type: gauge
+  - name: jnxOperatingMemoryCP
+    oid: 1.3.6.1.4.1.2636.3.1.13.1.27
+    type: gauge
+    help: The Allocated memory size for control plane in Megabytes - 1.3.6.1.4.1.2636.3.1.13.1.27
+    indexes:
+    - labelname: jnxOperatingContentsIndex
+      type: gauge
+    - labelname: jnxOperatingL1Index
+      type: gauge
+    - labelname: jnxOperatingL2Index
+      type: gauge
+    - labelname: jnxOperatingL3Index
+      type: gauge
+  - name: jnxOperatingFRUPower
+    oid: 1.3.6.1.4.1.2636.3.1.13.1.28
+    type: gauge
+    help: The present power of each FRU - 1.3.6.1.4.1.2636.3.1.13.1.28
+    indexes:
+    - labelname: jnxOperatingContentsIndex
+      type: gauge
+    - labelname: jnxOperatingL1Index
+      type: gauge
+    - labelname: jnxOperatingL2Index
+      type: gauge
+    - labelname: jnxOperatingL3Index
+      type: gauge
+  - name: ifIn1SecRate
+    oid: 1.3.6.1.4.1.2636.3.3.1.1.1
+    type: gauge
+    help: The number of bits per second (bps), delivered by this (sub-)layer to its
+      next higher (sub-)layer. - 1.3.6.1.4.1.2636.3.3.1.1.1
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+  - name: ifIn1SecOctets
+    oid: 1.3.6.1.4.1.2636.3.3.1.1.2
+    type: gauge
+    help: The number of octets per second (Bps, Bytes per second), delivered by this
+      (sub-)layer to its next higher (sub-)layer. - 1.3.6.1.4.1.2636.3.3.1.1.2
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+  - name: ifIn1SecPkts
+    oid: 1.3.6.1.4.1.2636.3.3.1.1.3
+    type: gauge
+    help: The number of packets per second (pps), delivered by this (sub-)layer to
+      its next higher (sub-)layer. - 1.3.6.1.4.1.2636.3.3.1.1.3
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+  - name: ifOut1SecRate
+    oid: 1.3.6.1.4.1.2636.3.3.1.1.4
+    type: gauge
+    help: The number of bits per second (bps), delivered by this (sub-)layer to its
+      next lower (sub-)layer. - 1.3.6.1.4.1.2636.3.3.1.1.4
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+  - name: ifOut1SecOctets
+    oid: 1.3.6.1.4.1.2636.3.3.1.1.5
+    type: gauge
+    help: The number of octets per second (Bps, Bytes per second), delivered by this
+      (sub-)layer to its next lower (sub-)layer. - 1.3.6.1.4.1.2636.3.3.1.1.5
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+  - name: ifOut1SecPkts
+    oid: 1.3.6.1.4.1.2636.3.3.1.1.6
+    type: gauge
+    help: The number of packets per second (pps), delivered by this (sub-)layer to
+      its next lower (sub-)layer. - 1.3.6.1.4.1.2636.3.3.1.1.6
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+  - name: ifHCIn1SecRate
+    oid: 1.3.6.1.4.1.2636.3.3.1.1.7
+    type: counter
+    help: The number of bits per second (bps), delivered by this (sub-)layer to its
+      next higher (sub-)layer - 1.3.6.1.4.1.2636.3.3.1.1.7
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+  - name: ifHCOut1SecRate
+    oid: 1.3.6.1.4.1.2636.3.3.1.1.8
+    type: counter
+    help: The number of bits per second (bps), delivered by this (sub-)layer to its
+      next lower (sub-)layer - 1.3.6.1.4.1.2636.3.3.1.1.8
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+  - name: ifJnxInErrors
+    oid: 1.3.6.1.4.1.2636.3.3.1.1.9
+    type: counter
+    help: 'Errors: The sum of the incoming frame aborts and FCS errors. - 1.3.6.1.4.1.2636.3.3.1.1.9'
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+  - name: ifJnxInFrameErrors
+    oid: 1.3.6.1.4.1.2636.3.3.1.1.10
+    type: counter
+    help: 'Framing Errors: The number of input packets which were misaligned. - 1.3.6.1.4.1.2636.3.3.1.1.10'
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+  - name: ifJnxInQDrops
+    oid: 1.3.6.1.4.1.2636.3.3.1.1.11
+    type: counter
+    help: 'Drops: The number of packets dropped by the input queue of the I/O Manager
+      ASIC. - 1.3.6.1.4.1.2636.3.3.1.1.11'
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+  - name: ifJnxInRunts
+    oid: 1.3.6.1.4.1.2636.3.3.1.1.12
+    type: counter
+    help: 'Runts: Frames received that are smaller than the runt threshold. - 1.3.6.1.4.1.2636.3.3.1.1.12'
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+  - name: ifJnxInGiants
+    oid: 1.3.6.1.4.1.2636.3.3.1.1.13
+    type: counter
+    help: 'Giants: Frames received that are larger than the giant threshold. - 1.3.6.1.4.1.2636.3.3.1.1.13'
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+  - name: ifJnxInDiscards
+    oid: 1.3.6.1.4.1.2636.3.3.1.1.14
+    type: counter
+    help: 'Policed Discards: Frames that the incoming packet match code discarded
+      because they were not recognized or of interest. - 1.3.6.1.4.1.2636.3.3.1.1.14'
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+  - name: ifJnxInHslCrcErrors
+    oid: 1.3.6.1.4.1.2636.3.3.1.1.15
+    type: counter
+    help: 'HS Link CRC Errors: The number of CRC errors on the high-speed links between
+      the ASICs responsible for handling the router interfaces while receiving packets.
+      - 1.3.6.1.4.1.2636.3.3.1.1.15'
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+  - name: ifJnxInHslFifoOverFlows
+    oid: 1.3.6.1.4.1.2636.3.3.1.1.16
+    type: counter
+    help: 'HS link FIFO overflows: The number of FIFO overflows on the high-speed
+      links between the ASICs responsible for handling the router interfaces. - 1.3.6.1.4.1.2636.3.3.1.1.16'
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+  - name: ifJnxInL3Incompletes
+    oid: 1.3.6.1.4.1.2636.3.3.1.1.17
+    type: counter
+    help: 'L3 incompletes: The number of incoming packets that fail Layer 3 sanity
+      checks of the header. - 1.3.6.1.4.1.2636.3.3.1.1.17'
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+  - name: ifJnxInL2ChanErrors
+    oid: 1.3.6.1.4.1.2636.3.3.1.1.18
+    type: counter
+    help: 'L2 channel errors: the number of incoming packets for which the sofware
+      could not find a valid logical interface. - 1.3.6.1.4.1.2636.3.3.1.1.18'
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+  - name: ifJnxInL2MismatchTimeouts
+    oid: 1.3.6.1.4.1.2636.3.3.1.1.19
+    type: counter
+    help: 'L2 mismatch timeouts: The count of malformed or short packets that cause
+      the incoming packet handler to discard the frame as unreadable. - 1.3.6.1.4.1.2636.3.3.1.1.19'
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+  - name: ifJnxInInvalidVCs
+    oid: 1.3.6.1.4.1.2636.3.3.1.1.20
+    type: counter
+    help: 'Invalid VCs: Number of cells that arrived for a nonexistent virtual circuit.
+      - 1.3.6.1.4.1.2636.3.3.1.1.20'
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+  - name: ifJnxInFifoErrors
+    oid: 1.3.6.1.4.1.2636.3.3.1.1.21
+    type: counter
+    help: 'FIFO errors: The number of FIFO errors in the receive direction as reported
+      by the ASIC on the PIC. - 1.3.6.1.4.1.2636.3.3.1.1.21'
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+  - name: ifJnxBucketDrops
+    oid: 1.3.6.1.4.1.2636.3.3.1.1.22
+    type: counter
+    help: 'Bucket drops: Drops due to traffic load exceeding the interface transmit/receive
+      leaky bucket configuration. - 1.3.6.1.4.1.2636.3.3.1.1.22'
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+  - name: ifJnxSramErrors
+    oid: 1.3.6.1.4.1.2636.3.3.1.1.23
+    type: counter
+    help: 'SRAM errors: This counter increments when a hardware error has occurred
+      in the SRAM on the PIC. - 1.3.6.1.4.1.2636.3.3.1.1.23'
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+  - name: ifJnxOutErrors
+    oid: 1.3.6.1.4.1.2636.3.3.1.1.24
+    type: counter
+    help: 'Errors: The sum of the outgoing frame aborts and FCS errors. - 1.3.6.1.4.1.2636.3.3.1.1.24'
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+  - name: ifJnxCollisions
+    oid: 1.3.6.1.4.1.2636.3.3.1.1.25
+    type: counter
+    help: 'Collisions: The number of output collisions detected on this interface.
+      - 1.3.6.1.4.1.2636.3.3.1.1.25'
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+  - name: ifJnxCarrierTrans
+    oid: 1.3.6.1.4.1.2636.3.3.1.1.26
+    type: counter
+    help: 'Carrier transitions: The number of times the interface saw the carrier
+      signal transition. - 1.3.6.1.4.1.2636.3.3.1.1.26'
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+  - name: ifJnxOutQDrops
+    oid: 1.3.6.1.4.1.2636.3.3.1.1.27
+    type: counter
+    help: 'Drops: The number of packets dropped by the output queue of the I/O Manager
+      ASIC. - 1.3.6.1.4.1.2636.3.3.1.1.27'
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+  - name: ifJnxOutAgedErrors
+    oid: 1.3.6.1.4.1.2636.3.3.1.1.28
+    type: counter
+    help: 'Aged packets: The number of packets that remained in shared packet SDRAM
+      for so long that the system automatically purged them. - 1.3.6.1.4.1.2636.3.3.1.1.28'
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+  - name: ifJnxOutFifoErrors
+    oid: 1.3.6.1.4.1.2636.3.3.1.1.29
+    type: counter
+    help: 'FIFO errors: The number of FIFO errors in the transmit direction as reported
+      by the ASIC on the PIC. - 1.3.6.1.4.1.2636.3.3.1.1.29'
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+  - name: ifJnxOutHslFifoUnderFlows
+    oid: 1.3.6.1.4.1.2636.3.3.1.1.30
+    type: counter
+    help: 'HS link FIFO underflows: The number of FIFO underflows on the high-speed
+      links between the ASICs responsible for handling the router interfaces. - 1.3.6.1.4.1.2636.3.3.1.1.30'
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+  - name: ifJnxOutHslCrcErrors
+    oid: 1.3.6.1.4.1.2636.3.3.1.1.31
+    type: counter
+    help: 'HS Link CRC Errors: The number of CRC errors on the high-speed links between
+      the ASICs responsible for handling the router interfaces while transmitting
+      packets. - 1.3.6.1.4.1.2636.3.3.1.1.31'
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+  - name: ifJnxCrcErrors
+    oid: 1.3.6.1.4.1.2636.3.3.1.1.32
+    type: counter
+    help: 'CRC Errors: The number of CRC errors - 1.3.6.1.4.1.2636.3.3.1.1.32'
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+  - name: ifJnxFcsErrors
+    oid: 1.3.6.1.4.1.2636.3.3.1.1.33
+    type: counter
+    help: 'FCS Errors: The number of FCS errors - 1.3.6.1.4.1.2636.3.3.1.1.33'
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+  - name: jnxJsSPUMonitoringIndex
+    oid: 1.3.6.1.4.1.2636.3.39.1.12.1.1.1.1
+    type: gauge
+    help: SPU's overall index in platform. - 1.3.6.1.4.1.2636.3.39.1.12.1.1.1.1
+    indexes:
+    - labelname: jnxJsSPUMonitoringIndex
+      type: gauge
+  - name: jnxJsSPUMonitoringFPCIndex
+    oid: 1.3.6.1.4.1.2636.3.39.1.12.1.1.1.2
+    type: gauge
+    help: Which FPC SPU is on. - 1.3.6.1.4.1.2636.3.39.1.12.1.1.1.2
+    indexes:
+    - labelname: jnxJsSPUMonitoringIndex
+      type: gauge
+  - name: jnxJsSPUMonitoringSPUIndex
+    oid: 1.3.6.1.4.1.2636.3.39.1.12.1.1.1.3
+    type: gauge
+    help: SPU'Index inside the FPC. - 1.3.6.1.4.1.2636.3.39.1.12.1.1.1.3
+    indexes:
+    - labelname: jnxJsSPUMonitoringIndex
+      type: gauge
+  - name: jnxJsSPUMonitoringCPUUsage
+    oid: 1.3.6.1.4.1.2636.3.39.1.12.1.1.1.4
+    type: gauge
+    help: Current SPU(CPU) Utilization in percentage. - 1.3.6.1.4.1.2636.3.39.1.12.1.1.1.4
+    indexes:
+    - labelname: jnxJsSPUMonitoringIndex
+      type: gauge
+  - name: jnxJsSPUMonitoringMemoryUsage
+    oid: 1.3.6.1.4.1.2636.3.39.1.12.1.1.1.5
+    type: gauge
+    help: Current memory usage of SPU(CPU) in percentage. - 1.3.6.1.4.1.2636.3.39.1.12.1.1.1.5
+    indexes:
+    - labelname: jnxJsSPUMonitoringIndex
+      type: gauge
+  - name: jnxJsSPUMonitoringCurrentFlowSession
+    oid: 1.3.6.1.4.1.2636.3.39.1.12.1.1.1.6
+    type: gauge
+    help: Current flow session number of SPU. - 1.3.6.1.4.1.2636.3.39.1.12.1.1.1.6
+    indexes:
+    - labelname: jnxJsSPUMonitoringIndex
+      type: gauge
+  - name: jnxJsSPUMonitoringMaxFlowSession
+    oid: 1.3.6.1.4.1.2636.3.39.1.12.1.1.1.7
+    type: gauge
+    help: Max flow session number of SPU. - 1.3.6.1.4.1.2636.3.39.1.12.1.1.1.7
+    indexes:
+    - labelname: jnxJsSPUMonitoringIndex
+      type: gauge
+  - name: jnxJsSPUMonitoringCurrentCPSession
+    oid: 1.3.6.1.4.1.2636.3.39.1.12.1.1.1.8
+    type: gauge
+    help: Current CP session number of SPU. - 1.3.6.1.4.1.2636.3.39.1.12.1.1.1.8
+    indexes:
+    - labelname: jnxJsSPUMonitoringIndex
+      type: gauge
+  - name: jnxJsSPUMonitoringMaxCPSession
+    oid: 1.3.6.1.4.1.2636.3.39.1.12.1.1.1.9
+    type: gauge
+    help: Max CP session number of SPU. - 1.3.6.1.4.1.2636.3.39.1.12.1.1.1.9
+    indexes:
+    - labelname: jnxJsSPUMonitoringIndex
+      type: gauge
+  - name: jnxJsSPUMonitoringNodeIndex
+    oid: 1.3.6.1.4.1.2636.3.39.1.12.1.1.1.10
+    type: gauge
+    help: This attribute is used to identify a chassis - 1.3.6.1.4.1.2636.3.39.1.12.1.1.1.10
+    indexes:
+    - labelname: jnxJsSPUMonitoringIndex
+      type: gauge
+  - name: jnxJsSPUMonitoringNodeDescr
+    oid: 1.3.6.1.4.1.2636.3.39.1.12.1.1.1.11
+    type: DisplayString
+    help: This attribute is used to describe the chassis/cluster node information
+      - 1.3.6.1.4.1.2636.3.39.1.12.1.1.1.11
+    indexes:
+    - labelname: jnxJsSPUMonitoringIndex
+      type: gauge
+  - name: jnxJsSPUMonitoringFlowSessIPv4
+    oid: 1.3.6.1.4.1.2636.3.39.1.12.1.1.1.12
+    type: gauge
+    help: Current IPv4 flow session number of SPU. - 1.3.6.1.4.1.2636.3.39.1.12.1.1.1.12
+    indexes:
+    - labelname: jnxJsSPUMonitoringIndex
+      type: gauge
+  - name: jnxJsSPUMonitoringFlowSessIPv6
+    oid: 1.3.6.1.4.1.2636.3.39.1.12.1.1.1.13
+    type: gauge
+    help: Current IPv6 flow session number of SPU. - 1.3.6.1.4.1.2636.3.39.1.12.1.1.1.13
+    indexes:
+    - labelname: jnxJsSPUMonitoringIndex
+      type: gauge
+  - name: jnxJsSPUMonitoringCPSessIPv4
+    oid: 1.3.6.1.4.1.2636.3.39.1.12.1.1.1.14
+    type: gauge
+    help: Current IPv4 CP session number of SPU. - 1.3.6.1.4.1.2636.3.39.1.12.1.1.1.14
+    indexes:
+    - labelname: jnxJsSPUMonitoringIndex
+      type: gauge
+  - name: jnxJsSPUMonitoringCPSessIPv6
+    oid: 1.3.6.1.4.1.2636.3.39.1.12.1.1.1.15
+    type: gauge
+    help: Current IPv6 CP session number of SPU. - 1.3.6.1.4.1.2636.3.39.1.12.1.1.1.15
+    indexes:
+    - labelname: jnxJsSPUMonitoringIndex
+      type: gauge

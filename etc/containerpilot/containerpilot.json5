@@ -1,0 +1,60 @@
+{
+  consul: "127.0.0.1:8500",
+  jobs: [
+    {
+      name: "preStart",
+      exec: "/usr/local/lib/preStart.sh",
+      timeout: "60s",
+    },
+    {
+      name: "{{ .CONSUL_SERVICE_NAME | default "snmpr-exporter" }}",
+      port: "{{ .CONSUL_SERVICE_PORT | default "9090" }}",
+      exec: [
+        "/usr/local/bin/snmp_exporter",
+        "--log.level=info",
+        "--config.file=/usr/local/etc/snmp.yml",
+        "--web.listen-address=:9090"
+      ],
+      tags: ["snmp_exporter_job"],
+      consul: {
+        enableTagOverride: false,
+        deregisterCriticalServiceAfter: "60s"
+      },
+      when: {
+        source: "preStart",
+        once: "exitSuccess"
+      },
+      health: {
+        "exec": "curl -so /dev/null http://localhost:9090/metrics",
+        "interval": 10,
+        "ttl": 25
+      }
+    },
+    {
+      name: "consul-agent",
+      exec: ["/usr/local/bin/consul", "agent", "-config-dir=/usr/local/etc/consul"],
+      restarts: "unlimited",
+      when: {
+        source: "preStart",
+        once: "exitSuccess"
+      },
+      health: {
+      // this health check will fire events inside this container
+      // but not update the external service catalog
+        exec: "curl  -so /dev/null http://localhost:8500/v1/health/node/`hostname`",
+        logging: { raw: true },
+        interval: 5,
+        ttl: 10
+      }
+    },
+    {
+      name: "consul-template",
+      exec: ["/usr/local/bin/consul-template", "-config", "/usr/local/etc/consul-template"],
+      when: {
+        source: "consul-agent",
+        once: "healthy",
+        timeout: "60s"
+      }      
+    }
+  ]
+}
